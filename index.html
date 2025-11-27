@@ -282,7 +282,7 @@
             // --- PDF CONTENT ---
             
             pdf.setFontSize(22);
-            pdf.text("Digital Signature Verification Document", 40, 40);
+            pdf.text("DYFI நடத்தும் 1-லட்சம் TNPSC பணியிடங்களை நிரப்பக் கோரி கையெழுத்து இயக்கம் E-Signature", 40, 40);
             
             pdf.setFontSize(14);
             pdf.text(`Document signed by: ${name}`, 40, 65);
@@ -377,7 +377,7 @@
         formData.append("Phone Number", number); 
         formData.append("District", district); 
         
-        formData.append("message", `New signature details received. The PDF was explicitly NOT attached to this email.`);
+        formData.append("message", `New signature details received.For new dyfi member.`);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -405,7 +405,7 @@
             console.error("Fetch Error:", error);
         } finally {
             // Reset UI
-            btn.innerText = "Submit Details (No PDF Sent)"; 
+            btn.innerText = "Submit Details "; 
             btn.disabled = false;
         }
     };
